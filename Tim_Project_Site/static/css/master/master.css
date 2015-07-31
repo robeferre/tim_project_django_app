@@ -1,0 +1,356 @@
+@charset "UTF-8";
+
+/*------------------------------------------------
+TABLE OF CONTENTS
+--------------------------------------------------
+BODY
+1. Wrapper: #wrapper
+2. Header: #header
+2.1 Search Box: #search-box
+2.2 RSS Box: #rss-box
+3. Main content: #maincontent
+3.1 Title: #maincontent h1
+3.2 Paragraph: #maincontent p
+4. Sidebar: #sidebar
+5. Footer: #footer
+------------------------------------------------- */
+
+/* ---------------------------- */
+/*   STANDARD HTML TAG RESET    */
+/* ---------------------------- */
+body,h1, h2, h3,
+p, ul, li,form {
+
+    border:	0;
+    margin:	0px;
+    padding:0px;
+}
+
+/* ---------------------------- */
+/* STANDARD HTML TAG DEFINITION */
+/* ---------------------------- */
+
+body, form, input {
+
+    color:					#000000;
+    font-family:			'century gothic';;
+    font-size:				12px;
+
+
+}
+
+h1{font-size:24px; /* ...other properties... */}
+h2{font-size:18px; /* ...other properties... */}
+h3{font-size:13px; /* ...other properties... */}
+a:link, a:visited{color:#0033CC;}
+a:hover {color:#666666;}
+
+html  {
+
+    background: 				url("/static_media/images/base/bg.png") no-repeat center center fixed;
+    -webkit-background-size: 	cover;
+    -moz-background-size: 		cover;
+    -o-background-size: 		cover;
+    background-size: 			cover;
+
+}
+
+/* ----------------------------*/
+/* 		  PAGE ELEMENTS 	   */
+/* ----------------------------*/
+
+#container{
+
+    margin:					0 auto;
+    width:					980px;
+    #background:			#E2E0EF
+
+}
+
+/* ---------------------------*/
+/* 		    TOP BAR 		  */
+/*----------------------------*/
+
+#topbar{
+
+    background:				url("/static_media/images/header_nav_bar/top-bar-bg.png");
+    width:					auto;
+    height:					60px;
+    display:				block;
+    #background:			#B9B3EF
+
+}
+
+#logout{
+
+    position: absolute;
+    margin-left:            890px;
+    margin-top:             40px;
+    font-family:            'century gothic';
+    font-size:12px;
+
+}
+
+/* ---------------------------*/
+/* 			NAVIGATION	      */
+/*----------------------------*/
+#navbar{
+
+    background:				url("/static_media/images/header_nav_bar/nav_bar.png");
+    background-repeat: 		no-repeat;
+    width:					980px;
+    height:					80px;
+    display:				block;
+    #background:			#746BBF;
+
+}
+
+#navbar a{
+
+    width: 			        160px;
+    height:				    80px;
+    display: 			    inline-block;
+    line-height: 		    60px;
+    #padding-bottom: 	    10px;
+    #padding-left: 		    125px;
+    #padding-right: 		8px;
+    #padding-top:			6px;
+
+}
+
+.home_button {
+
+    display: 				block; /* 'convert' <a> to <div> */
+    margin-bottom:  	    10px;
+    background-position: 	center top;
+    background-repeat: 		no-repeat;
+    width: 					160px;
+    height: 				160px;
+    background:				transparent url("/static_media/images/header_nav_bar/buttons/home-button.png") center top no-repeat;
+
+}
+
+.home_button:hover {
+
+    background-image: 		url("/static_media/images/header_nav_bar/buttons/home-button-hover.png");
+
+}
+
+.project_button {
+
+    display:					block;
+    background:				url("/static_media/images/header_nav_bar/buttons/project-button.png") center top no-repeat;
+
+}
+
+.project_button:hover {
+
+    background-image: 		url("/static_media/images/header_nav_bar/buttons/project-button-hover.png");
+
+}
+
+.tim_button {
+
+    #margin-top:               30px;
+    #width:                    160px;
+    #height:                   160px;
+    display:					block;
+    background:				url("/static_media/images/header_nav_bar/buttons/tim-button.png") center top no-repeat;
+
+}
+
+.tim_button:hover {
+
+    background-image: 		url("/static_media/images/header_nav_bar/buttons/tim-button-hover.png");
+
+}
+
+/* --------------------------*/
+/* 		 SUB NAV BAR        */
+/*---------------------------*/
+#subnavbar{
+
+
+    background-repeat: 		no-repeat;
+    width:					980px;
+    height:					30px;
+    display:				block;
+    #background:		    	#746BBF;
+
+
+}
+
+#subnavbar a{
+    text-decoration:        none;
+    font-size:				16px;
+}
+
+/* --------------------------*/
+/* 		  WELCOME DIV        */
+/*---------------------------*/
+#welcome_message {
+
+    font-family:            'century gothic';
+    margin-left:            30px;
+    margin-top:             30px;
+    width: 			        150px;
+    height:				    300px;
+    display:				block;
+    #background:            #333333;
+
+}
+
+/* --------------------------*/
+/* 		  COLUMN LEFT        */
+/*---------------------------*/
+#menu{
+
+    float:left;
+    margin-right:30px;
+    margin-left:15px;
+
+    height:400px;
+    width:200px;
+    #background:#544F7F;
+
+    display:block;
+    #padding:10px 0;
+}
+
+#menu h1{
+    border-bottom:solid 1px #DEDEDE;
+    font-family:Georgia;
+    margin-bottom:20px;
+}
+
+#menu p{
+
+    font-size:14px;
+    color:#333333;
+}
+
+/* --------------------------*/
+/*    COLUMN RIGHT ( MAIN )  */
+/*---------------------------*/
+#main{
+
+    float:left;
+    height:400px;
+    width:710px;
+    #background:#999999
+
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width:550px;
+}
+
+div.table-container{
+    margin-left: 100px;
+}
+
+
+
+.docs_button {
+
+    display:	block;
+    background-image:	transparent  url("/static_media/images/project_screen/doc-icon.png") center top no-repeat;
+
+}
+
+div.upload_form{
+    float:left;
+    width:310px;
+    height:150px;
+    display:	block;
+    #background:#333333;
+    background:    url("/static_media/images/upload_screen/upload_box.png") left top no-repeat;
+}
+
+#form_data form{
+    #background:#333333;
+    margin-left: 14px;
+    margin-top: 55px;
+
+}
+
+/*---------------------------*/
+/* 		FOOTER 				  *
+    /*----------------------------*/
+#footer{
+
+    clear:both;
+    color:#666666;
+    font-size:11px;
+}
+
+
+
+/* ----------------------------*/
+/* CUSTOM CLASSES */
+/* ----------------------------*/
+
+.red{color:#FF0000;}
+.left-align{float:left;}
+.small-text-gray{color:#999999; font-size:11px;}
+.small-text-green{color:#00CC33; font-size:11px;}
+
+.docs_button {
+
+    display:	block;
+    background-image:	transparent  url("/static_media/images/project_screen/doc-icon.png") center top no-repeat;
+
+}
+
+/*---------------------------*/
+/* 		FOOTER 				  *
+    /*----------------------------*/
+#footer{
+
+    clear:both;
+    color:#666666;
+    font-size:11px;
+}
+
+
+
+/* ----------------------------*/
+/* CUSTOM CLASSES */
+/* ----------------------------*/
+
+.red{color:#FF0000;}
+.left-align{float:left;}
+.small-text-gray{color:#999999; font-size:11px;}
+.small-text-green{color:#00CC33; font-size:11px;}
+
+.docs_button {
+
+    display:	block;
+    background-image:	transparent  url("/static_media/images/project_screen/doc-icon.png") center top no-repeat;
+
+}
+
+/*---------------------------*/
+/* 		FOOTER 				  *
+/*----------------------------*/
+
+
+#footer{
+
+    clear:both;
+    color:#666666;
+    font-size:11px;
+}
+
+
+
+/* ----------------------------*/
+/* CUSTOM CLASSES */
+/* ----------------------------*/
+
+.red{color:#FF0000;}
+.left-align{float:left;}
+.small-text-gray{color:#999999; font-size:11px;}
+.small-text-green{color:#00CC33; font-size:11px;}

@@ -1,0 +1,34 @@
+{% extends "portal/portal.html" %}
+
+{% comment %}
+File upload.
+{% endcomment %}
+
+{% block title %}
+    Upload file
+{% endblock %}
+
+{% block content %}
+
+    <div id="menu">
+
+    </div>
+
+    <div id="main">
+
+        <h1>Upload a file</h1>
+        <form enctype="multipart/form-data" method="post" action="/portal/uploadfile/">
+            {% csrf_token %}
+            <table>
+                {% for field in form %}
+                    {{ field.label_tag }}
+                    {{ field }}
+                {% endfor %}
+            </table>
+            <input type="submit" value="Submit" id="Save"/>
+        </form>
+
+
+    </div>
+
+{% endblock %}

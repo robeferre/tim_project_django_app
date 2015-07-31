@@ -1,0 +1,78 @@
+{% extends "portal/portal.html" %}
+
+{% comment %}
+Main PROJECT PAGE of the portal.
+{% endcomment %}
+
+{% block title %}
+    File Upload
+{% endblock %}
+
+
+{% comment %}
+    {% block subnavbar %}
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/portal/projetos/" class="project_page_link" title="Projetos">Projetos</a> >
+        <a href=""{{request.path }}" class="project_page_link" title="Projetos">Docs</a>
+    {% endblock %}
+{% endcomment %}
+{% block menu %}
+    <div class="upload_form">
+
+
+        <div id="form_data">
+
+            <form action="{% url list nome_projeto %}" method="post" id="upload_form" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>{{ form.non_field_errors }}</p>
+
+                <p>
+                    {{ form.docfile.errors }}
+                    {{ form.docfile }}
+                </p> <BR> <BR>
+                <p><input type="submit" value="Upload" /></p>
+            </form>
+
+        </div>
+
+
+    </div>
+{% endblock %}
+
+{% block main %}
+
+    {% load render_table from django_tables2 %}
+    {% render_table table %}
+
+    <!--
+    <div class="upload_form">
+
+
+        <div id="form_data">
+
+        <form action="{% url list nome_projeto %}" method="post" id="upload_form" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>{{ form.non_field_errors }}</p>
+
+            <p>
+                {{ form.docfile.errors }}
+                {{ form.docfile }}
+            </p> <BR> <BR>
+            <p><input type="submit" value="Upload" /></p>
+        </form>
+
+        </div>
+
+
+    </div>
+
+     -->
+
+    <!-- List of uploaded documents -->
+
+
+
+
+
+
+{% endblock %}

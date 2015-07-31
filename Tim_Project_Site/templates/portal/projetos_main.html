@@ -1,0 +1,30 @@
+{% extends "portal/portal.html" %}
+
+{% comment %}
+Main PROJECT PAGE of the portal.
+{% endcomment %}
+
+{% block title %}
+    Projetos
+{% endblock %}
+
+{% comment %}
+{% block subnavbar %}
+
+    <a href="{{request.path }}" class="project_page_link" title="Projetos">ProjetosBR>  </a>
+
+{% endblock %}
+{% endcomment %}
+
+
+{% block main %}
+
+    <!--Titulo-->
+    <img src="/static_media/images/project_screen/projetos_titulo.png" alt=""><BR/><BR/>
+
+
+    {% load render_table from django_tables2 %}
+    {% render_table table %}
+{% endblock %}
+
+

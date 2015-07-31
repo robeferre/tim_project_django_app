@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+html, body
+{
+    padding:    0;
+    border:     0px none;
+}
+
+html  {
+
+    background:                  url(/static_media/images/login/bg.png) no-repeat center center fixed;
+    -webkit-background-size:     cover;
+    -moz-background-size:        cover;
+    -o-background-size:          cover;
+    background-size:             cover;
+
+}
+
+div#login {
+
+		/*
+		Aligning login DIV
+		*/
+		width:              380px;
+		height:             290px;
+		top:                40%;
+		left:               50%;
+		margin-top:         -130px;
+		margin-left:        -190px;
+		position:           absolute;
+
+}
+
+div#contend {
+
+		width:              240px;
+		height:             150px;
+		top:                50%;
+		left:               50%;
+		margin-top:         -29px;
+		margin-left:        -105px;
+		position:           absolute;
+		#background-color:  #0FC;
+		
+}
+
